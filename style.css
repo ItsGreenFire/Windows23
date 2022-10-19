@@ -2,6 +2,69 @@ html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: calc(100vw);
+  background-position-y: -100px;
+}
+
+/* Find Box */
+
+#find-box {
+  display: none;
+  position: relative;
+  background-color: rgba(100, 100, 100, .55);
+  height: 350px;
+  width: 300px;
+  left: -500px;
+  border-radius: 0 25px 0 0;
+  bottom: calc(-20vw);
+  transition: .5s;
+}
+
+#find-box:hover {
+  background-color: rgba(100, 100, 100, .75);
+}
+
+
+/* Taskbar
+TODO: Make icons vertical aligned*/
+
+#taskbar {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: 100px;
+  left: 0;
+  background-color: rgba(100, 100, 100, .35);
+  border-radius: 15px 15px 0 0;
+  transition: .35s;
+}
+
+#taskbar:hover {
+  background-color: rgba(100, 100, 100, .7);
+}
+
+#taskbar > span {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  vertical-align: center;
+  bottom: -8px;
+}
+
+#taskbar > span > img {
+  display: inline-block;
+  vertical-align: center;
+  width: 40px;
+  transition: 0s;
+  bottom: 20%;
+  top: 20%;
+}
+
+#taskbar > span > img:hover {
+  width: 48px;
+  margin-top: -8px;
+  transition: .2s;
 }
 
 /* Bottom Bar */
@@ -21,6 +84,6 @@ html, body {
   color: whitesmoke;
   font-size: 25px;
   text-decoration: none;
-  top: 10px;
+  top: 7px;
   left: 25px;
 }
